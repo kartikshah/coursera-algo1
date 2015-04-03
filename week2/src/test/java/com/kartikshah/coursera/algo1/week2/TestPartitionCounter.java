@@ -1,8 +1,8 @@
 package com.kartikshah.coursera.algo1.week2;
 
-import junit.framework.Assert;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
@@ -19,17 +19,18 @@ public class TestPartitionCounter
     public void testReadInputNotNull() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        assertNotNull(counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/input1.txt")));
+        assertNotNull(counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/input1.txt")));
     }
 
     @Test
     public void testReadInputSixElement() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/input1.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/input1.txt"));
         assertEquals(6, integers.size());
     }
 
+    @Test
     public void testQuickSort() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
@@ -78,7 +79,7 @@ public class TestPartitionCounter
     public void testQuickSortTestInputChooseFirst() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/QuickSort.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/QuickSort.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseFirst());
         System.out.println("Choose First: " + numberOfComparisions);
         assertEquals(162085L, numberOfComparisions);
@@ -89,7 +90,7 @@ public class TestPartitionCounter
     public void testQuickSortTestInputChooseLast() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/QuickSort.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/QuickSort.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseLast());
         System.out.println("Choose Last: " + numberOfComparisions);
         assertEquals(164123L, numberOfComparisions);
@@ -100,7 +101,7 @@ public class TestPartitionCounter
     public void testQuickSortTestInputChooseMedian() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/QuickSort.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/QuickSort.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseMedian());
         System.out.println("Choose Median: " + numberOfComparisions);
         assertEquals(138382L, numberOfComparisions);
@@ -110,7 +111,7 @@ public class TestPartitionCounter
     public void testQuickSort100InputChooseFirst() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/100.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/100.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseFirst());
         System.out.println("Size 100 - Choose First: " + numberOfComparisions);
         assertEquals(615L, numberOfComparisions);
@@ -120,7 +121,7 @@ public class TestPartitionCounter
     public void testQuickSort100InputChooseLast() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/100.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/100.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseLast());
         System.out.println("Size 100 - Choose Last: " + numberOfComparisions);
         assertEquals(587L, numberOfComparisions);
@@ -130,7 +131,7 @@ public class TestPartitionCounter
     public void testQuickSort100InputChooseMedian() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/100.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/100.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseMedian());
         System.out.println("Size 100 - Choose Median: " + numberOfComparisions);
         assertEquals(518L, numberOfComparisions);
@@ -140,7 +141,7 @@ public class TestPartitionCounter
     public void testQuickSort1000InputChooseFirst() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/1000.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/1000.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseFirst());
         System.out.println("Size 1000 - Choose First: " + numberOfComparisions);
         assertEquals(10297L, numberOfComparisions);
@@ -150,7 +151,7 @@ public class TestPartitionCounter
     public void testQuickSort1000InputChooseLast() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/1000.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/1000.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseLast());
         System.out.println("Size 1000 - Choose Last: " + numberOfComparisions);
         assertEquals(10184L, numberOfComparisions);
@@ -161,7 +162,7 @@ public class TestPartitionCounter
     public void testQuickSort1000InputChooseMedian() throws Exception
     {
         PartitionCounter counter = new PartitionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week2/src/test/resources/1000.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/1000.txt"));
         long numberOfComparisions = counter.quickSort(integers, integers.size(), new ChooseMedian());
         System.out.println("Size 1000 - Choose Median: " + numberOfComparisions);
         assertEquals(8921L, numberOfComparisions);

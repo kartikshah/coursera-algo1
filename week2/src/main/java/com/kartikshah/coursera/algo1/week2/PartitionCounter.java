@@ -20,7 +20,7 @@ public class PartitionCounter
                     .collect(Collectors.toList());
 
         }catch(IOException ioException){
-            //TODO: Implement
+            System.out.println("IOException finding input file");
         }
         return null;
     }

@@ -18,7 +18,6 @@ public class ChooseMedian implements QuickSortPivotStrategy
         List<Integer> list1 = Arrays.asList(first, middle, last);
         Collections.sort(list1);
         int returnIndex = list1.get(1)==first?0:list1.get(1)==last?list.size()-1:middleIndex;
-//        System.out.println(returnIndex);
         return returnIndex;
     }
 }
