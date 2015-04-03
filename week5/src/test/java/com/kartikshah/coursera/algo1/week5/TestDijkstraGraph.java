@@ -18,7 +18,7 @@ public class TestDijkstraGraph
     public void testReadInputNotNull() throws Exception
     {
         DirectedGraph graph = new DirectedGraph();
-        graph.readFile(new FileReader("/Users/kartik/dev/code/algo1/week5/src/test/resources/testcase1.txt"));
+        graph.readFile(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/testcase1.txt"));
         System.out.println(graph);
     }
 
@@ -26,7 +26,7 @@ public class TestDijkstraGraph
     public void testTestcase1() throws Exception
     {
         DirectedGraph graph = new DirectedGraph();
-        graph.readFile(new FileReader("/Users/kartik/dev/code/algo1/week5/src/test/resources/testcase1.txt"));
+        graph.readFile(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/testcase1.txt"));
         graph.findShortestPath(1L);
     }
 
@@ -34,7 +34,7 @@ public class TestDijkstraGraph
     public void testTestcase2() throws Exception
     {
         DirectedGraph graph = new DirectedGraph();
-        graph.readFile(new FileReader("/Users/kartik/dev/code/algo1/week5/src/test/resources/testcase2.txt"));
+        graph.readFile(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/testcase2.txt"));
         graph.findShortestPath(1L);
     }
 
@@ -42,7 +42,7 @@ public class TestDijkstraGraph
     public void testTestcase3() throws Exception
     {
         DirectedGraph graph = new DirectedGraph();
-        graph.readFile(new FileReader("/Users/kartik/dev/code/algo1/week5/src/test/resources/testcase3.txt"));
+        graph.readFile(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/testcase3.txt"));
         graph.findShortestPath(1L);
     }
 
