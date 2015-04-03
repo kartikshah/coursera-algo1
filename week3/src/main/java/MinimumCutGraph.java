@@ -36,7 +36,8 @@ public class MinimumCutGraph
             }
 
         } catch (IOException ioException){
-            //TODO: Implement
+            System.out.println("IOException reading Input file.");
+
         }
         return flattenGraph;
     }
