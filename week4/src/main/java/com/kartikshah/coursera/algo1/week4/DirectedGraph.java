@@ -1,6 +1,5 @@
 package com.kartikshah.coursera.algo1.week4;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -108,7 +107,6 @@ public class DirectedGraph
         dfsloop_two(true);
 
         Map<Long, Long> scc = leader.values().stream().collect(Collectors.groupingBy(Node::getLabel, Collectors.counting()));
-//        System.out.println("SCC Leaders: " + scc);
         System.out.println("SCC Count:" + scc.values().stream().sorted(Collections.reverseOrder()).limit(5).collect(Collectors.toList()));
     }
 
