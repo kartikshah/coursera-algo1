@@ -74,6 +74,6 @@ public class Node
     @Override
     public String toString()
     {
-        return "Node: {" + label + ", " + explored + ", Edges:" + edges.values() + ", RevEdge:" + reverseEdges.values() + "} \n";
+        return "Node: {" + label + ", " + explored + ", Edges:" + edges.values() + /*", RevEdge:" + reverseEdges.values() +*/ "} \n";
     }
 }

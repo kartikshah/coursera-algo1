@@ -6,10 +6,12 @@ package com.kartikshah.coursera.algo1.week5;
 public class Edge
 {
     private Node toNode;
+    private Long length;
 
-    public Edge(Node toNode)
+    public Edge(Node toNode, Long length)
     {
         this.toNode = toNode;
+        this.length = length;
     }
 
     public Node getToNode()
@@ -22,9 +24,19 @@ public class Edge
         this.toNode = toNode;
     }
 
+    public Long getLength()
+    {
+        return length;
+    }
+
+    public void setLength(Long length)
+    {
+        this.length = length;
+    }
+
     @Override
     public String toString()
     {
-        return "" + toNode.getLabel();
+        return "" + toNode.getLabel() + "{" + getLength() + "}";
     }
 }
