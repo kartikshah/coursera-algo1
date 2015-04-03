@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,14 +16,15 @@ public class InversionCounterTest
     public void testReadInputNotNull() throws Exception
     {
         InversionCounter counter = new InversionCounter();
-        assertNotNull(counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week1/src/test/resources/input1.txt")));
+        System.out.println(new File("").getAbsolutePath());
+        assertNotNull(counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/input1.txt")));
     }
 
     @Test
     public void testReadInputSixElement() throws Exception
     {
         InversionCounter counter = new InversionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week1/src/test/resources/input1.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath()+ "/src/test/resources/input1.txt"));
         assertEquals(6, integers.size());
     }
 
@@ -125,7 +123,7 @@ public class InversionCounterTest
     {
         long startTime = System.currentTimeMillis();
         InversionCounter counter = new InversionCounter();
-        List<Integer> integers = counter.readInput(new FileReader("/Users/kartik/dev/code/algo1/week1/src/test/resources/IntegerArray.txt"));
+        List<Integer> integers = counter.readInput(new FileReader(new File("").getAbsolutePath() + "/src/test/resources/IntegerArray.txt"));
         long stepOneTime = System.currentTimeMillis();
         ListCountTuple result = counter.countInversion(integers, integers.size());
         long endTime = System.currentTimeMillis();

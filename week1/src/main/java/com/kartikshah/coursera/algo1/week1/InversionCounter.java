@@ -3,9 +3,7 @@ package com.kartikshah.coursera.algo1.week1;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +27,6 @@ public class InversionCounter
     }
 
     ListCountTuple countInversion(List<Integer> integerList, Integer length){
-//        System.out.println("Calling countInversion with :" + integerList);
         if (length == 1) return new ListCountTuple(integerList, 0L);
         List<Integer> partitionOne = integerList.subList(0, integerList.size()/2);
         List<Integer> partitionTwo = integerList.subList(length/2, length);
@@ -40,7 +37,6 @@ public class InversionCounter
     }
 
     ListCountTuple countSplitInversion(List<Integer> bList, List<Integer> cList, Integer length){
-//        System.out.println("Calling countSplitInversion with: b = " + bList + " and c = " + cList + " length = " + length );
         int i = 0; int j = 0;
         long count = 0;
 
@@ -61,8 +57,6 @@ public class InversionCounter
 
         if (i < bList.size()) result.addAll(bList.subList(i, bList.size()));
         if (j < cList.size()) result.addAll(cList.subList(j, cList.size()));
-
-//        System.out.println("Result : " + result + " and count = " + count);
 
         return new ListCountTuple(result, count);
     }
