@@ -21,7 +21,7 @@ public class InversionCounter
                     .collect(Collectors.toList());
 
         }catch(IOException ioException){
-            //TODO: Implement
+            System.out.println("IOException finding input file");
         }
         return null;
     }
